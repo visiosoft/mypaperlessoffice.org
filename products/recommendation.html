@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Engine - MyPalessOffice</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../logo.png" width="100%" alt="MyPalessOffice">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="pos.html"><i class="fas fa-cash-register me-2"></i>POS System</a></li>
+                            <li><a class="dropdown-item" href="fleet.html"><i class="fas fa-truck me-2"></i>Fleet Management</a></li>
+                            <li><a class="dropdown-item" href="crm.html"><i class="fas fa-users me-2"></i>Site Core CRM</a></li>
+                            <li><a class="dropdown-item" href="towing.html"><i class="fas fa-car-crash me-2"></i>Car Towing</a></li>
+                            <li><a class="dropdown-item" href="gps.html"><i class="fas fa-satellite me-2"></i>GPRS System</a></li>
+                            <li><a class="dropdown-item active" href="recommendation.html"><i class="fas fa-robot me-2"></i>Recommendation Engine</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../services/ai-solutions.html"><i class="fas fa-robot me-2"></i>AI Solutions</a></li>
+                            <li><a class="dropdown-item" href="../services/data-analytics.html"><i class="fas fa-chart-line me-2"></i>Data Analytics</a></li>
+                            <li><a class="dropdown-item" href="../services/cloud-services.html"><i class="fas fa-cloud me-2"></i>Cloud Services</a></li>
+                            <li><a class="dropdown-item" href="../services/digital-transformation.html"><i class="fas fa-digital-tachograph me-2"></i>Digital Transformation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Header -->
+    <section class="product-header py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold">Recommendation Engine</h1>
+                    <p class="lead">AI-powered recommendation system for personalized product and service suggestions.</p>
+                    <a href="../index.html#contact" class="btn btn-primary btn-lg">Get Started</a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://img.freepik.com/free-photo/recommendation-engine-system_23-2149168443.jpg" alt="Recommendation Engine" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Personalized Recommendations</h3>
+                        <p>AI-driven personalized suggestions based on user behavior.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Behavior Analysis</h3>
+                        <p>Advanced user behavior analysis and pattern recognition.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <i class="fas fa-sync"></i>
+                        <h3>Dynamic Content</h3>
+                        <p>Real-time content delivery and updates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Performance Analytics</h3>
+                        <p>Comprehensive recommendation performance tracking.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Custom Rules</h3>
+                        <p>Configurable business rules and constraints.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Privacy Compliance</h3>
+                        <p>Built-in privacy and data protection features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Benefits</h2>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Increased customer engagement</li>
+                        <li><i class="fas fa-check-circle"></i> Higher conversion rates</li>
+                        <li><i class="fas fa-check-circle"></i> Improved customer satisfaction</li>
+                        <li><i class="fas fa-check-circle"></i> Enhanced cross-selling opportunities</li>
+                        <li><i class="fas fa-check-circle"></i> Data-driven decision making</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="benefits-image">
+                        <img src="https://img.freepik.com/free-photo/recommendation-engine-benefits_23-2149168444.jpg" alt="Recommendation Benefits" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Pricing Plans</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <div class="price">$149<span>/month</span></div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Up to 10,000 users</li>
+                            <li><i class="fas fa-check"></i> Basic recommendations</li>
+                            <li><i class="fas fa-check"></i> Standard analytics</li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-outline-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card featured">
+                        <h3>Professional</h3>
+                        <div class="price">$299<span>/month</span></div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Up to 100,000 users</li>
+                            <li><i class="fas fa-check"></i> Advanced recommendations</li>
+                            <li><i class="fas fa-check"></i> Custom rules</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Unlimited users</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check"></i> 24/7 support</li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-outline-primary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About MyPalessOffice</h4>
+                    <p>Delivering digital transformation across diverse industries with innovative solutions in AI, data analytics, and cloud services.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#products">Products</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Info</h4>
+                    <p>Business Center, World Central<br>Dubai, UAE</p>
+                    <p>+1 (785) 914-4481<br>+971 (56) 942-0950</p>
+                    <p>info@mypalessoffice.org</p>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center">
+                <p>&copy; 2025 MyPalessOffice, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html> 
