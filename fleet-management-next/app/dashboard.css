@@ -1,0 +1,221 @@
+/* Dashboard Specific Styles */
+.stat-card {
+  background: var(--odoo-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--odoo-gray);
+  margin: 0 auto 1rem;
+}
+
+.stat-icon .MuiSvgIcon-root {
+  font-size: 1.5rem;
+  color: var(--odoo-primary);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--odoo-dark);
+}
+
+.stat-label {
+  color: var(--odoo-dark);
+  font-size: 0.9rem;
+}
+
+.stat-link {
+  color: var(--odoo-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.stat-link:hover {
+  text-decoration: underline;
+}
+
+/* Chart Cards */
+.chart-card {
+  background: var(--odoo-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.chart-card .card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--odoo-border);
+}
+
+.chart-card .card-header h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--odoo-dark);
+}
+
+.chart-card .card-body {
+  padding: 1.5rem;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  margin-bottom: 1rem;
+}
+
+/* Activity Section */
+.activity-card {
+  background: var(--odoo-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.activity-card .card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--odoo-border);
+}
+
+.activity-card .card-header h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--odoo-dark);
+}
+
+.activity-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--odoo-border);
+  display: flex;
+  align-items: center;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--odoo-gray);
+  margin-right: 1rem;
+}
+
+.activity-icon .MuiSvgIcon-root {
+  font-size: 1.2rem;
+  color: var(--odoo-primary);
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-content div:first-child {
+  color: var(--odoo-dark);
+  margin-bottom: 0.25rem;
+}
+
+.activity-time {
+  font-size: 0.8rem;
+  color: var(--odoo-gray-dark);
+}
+
+/* Maintenance Section */
+.maintenance-card {
+  background: var(--odoo-white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.maintenance-card .card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--odoo-border);
+}
+
+.maintenance-card .card-header h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--odoo-dark);
+}
+
+.maintenance-list {
+  padding: 1rem 1.5rem;
+}
+
+.maintenance-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--odoo-border);
+}
+
+.maintenance-item:last-child {
+  border-bottom: none;
+}
+
+.maintenance-vehicle {
+  font-weight: 600;
+  color: var(--odoo-dark);
+  margin-bottom: 0.25rem;
+}
+
+.maintenance-date {
+  font-size: 0.9rem;
+  color: var(--odoo-gray-dark);
+}
+
+.maintenance-type {
+  font-size: 0.9rem;
+  color: var(--odoo-dark);
+  margin-top: 0.25rem;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-active {
+  background-color: var(--odoo-success-light);
+  color: var(--odoo-success);
+}
+
+.status-warning {
+  background-color: var(--odoo-warning-light);
+  color: #E65100;
+}
+
+.status-danger {
+  background-color: var(--odoo-danger-light);
+  color: var(--odoo-danger);
+} 

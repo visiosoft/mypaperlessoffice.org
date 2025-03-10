@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics - Fleet Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --odoo-primary: #875A7B;
+            --odoo-secondary: #6B4423;
+            --odoo-light: #A8D1FF;
+            --odoo-dark: #4C4C4C;
+            --odoo-success: #28a745;
+            --odoo-danger: #dc3545;
+            --odoo-warning: #ffc107;
+            --odoo-info: #17a2b8;
+            --odoo-white: #FFFFFF;
+            --odoo-gray: #F5F5F5;
+        }
+
+        body {
+            background-color: var(--odoo-gray);
+            font-family: "Lucida Grande", Helvetica, Verdana, Arial, sans-serif;
+            padding-top: 56px;
+        }
+
+        .navbar {
+            background-color: var(--odoo-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 56px;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .sidebar {
+            background-color: var(--odoo-white);
+            min-height: calc(100vh - 56px);
+            box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+            padding-top: 1rem;
+            position: fixed;
+            top: 56px;
+            left: 0;
+            width: inherit;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: var(--odoo-dark);
+            padding: 0.8rem 1rem;
+            margin: 0.2rem 0;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--odoo-gray);
+            color: var(--odoo-primary);
+        }
+
+        .nav-link i {
+            width: 20px;
+            margin-right: 0.5rem;
+        }
+
+        .main-content {
+            padding: 2rem;
+            margin-left: 16.666667%;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                min-height: auto;
+                margin-bottom: 1rem;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        .card {
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .card-header {
+            background-color: var(--odoo-white);
+            border-bottom: 1px solid #ddd;
+            padding: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--odoo-primary);
+            border-color: var(--odoo-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--odoo-secondary);
+            border-color: var(--odoo-secondary);
+        }
+
+        .report-card {
+            transition: transform 0.2s;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-bottom: 1rem;
+        }
+
+        .report-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--odoo-gray);
+            margin-bottom: 1rem;
+        }
+
+        .report-icon i {
+            font-size: 1.5rem;
+            color: var(--odoo-primary);
+        }
+
+        .date-range-picker {
+            background-color: var(--odoo-white);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="../logo.png" alt="MyPalessOffice">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i> Admin
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-cog me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vehicles.html">
+                            <i class="fas fa-truck"></i> Vehicles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drivers.html">
+                            <i class="fas fa-users"></i> Drivers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="routes.html">
+                            <i class="fas fa-route"></i> Routes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maintenance.html">
+                            <i class="fas fa-tools"></i> Maintenance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fuel.html">
+                            <i class="fas fa-gas-pump"></i> Fuel
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reports.html">
+                            <i class="fas fa-chart-bar"></i> Reports
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Reports & Analytics</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fas fa-download me-2"></i>Export Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Date Range Picker -->
+                <div class="date-range-picker">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <label class="form-label">Date Range</label>
+                            <select class="form-select">
+                                <option value="today">Today</option>
+                                <option value="week">This Week</option>
+                                <option value="month" selected>This Month</option>
+                                <option value="quarter">This Quarter</option>
+                                <option value="year">This Year</option>
+                                <option value="custom">Custom Range</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" class="form-control" value="2024-02-01">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">End Date</label>
+                            <input type="date" class="form-control" value="2024-02-29">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card report-card">
+                            <div class="card-body">
+                                <div class="report-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h5 class="card-title">Total Distance</h5>
+                                <h2 class="mb-0">12,450 km</h2>
+                                <small class="text-success">+8.5% from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card report-card">
+                            <div class="card-body">
+                                <div class="report-icon">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <h5 class="card-title">Fuel Cost</h5>
+                                <h2 class="mb-0">$3,250</h2>
+                                <small class="text-danger">-2.3% from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card report-card">
+                            <div class="card-body">
+                                <div class="report-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h5 class="card-title">Maintenance Cost</h5>
+                                <h2 class="mb-0">$1,850</h2>
+                                <small class="text-success">+5.2% from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card report-card">
+                            <div class="card-body">
+                                <div class="report-icon">
+                                    <i class="fas fa-route"></i>
+                                </div>
+                                <h5 class="card-title">Active Routes</h5>
+                                <h2 class="mb-0">15</h2>
+                                <small class="text-success">+3 from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Fuel Consumption Trend</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="fuelChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Vehicle Distribution</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="vehicleChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Maintenance Cost by Vehicle</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="maintenanceChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Driver Performance</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <canvas id="driverChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fuel Consumption Chart
+        const fuelCtx = document.getElementById('fuelChart').getContext('2d');
+        new Chart(fuelCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Fuel Consumption (L)',
+                    data: [1200, 1900, 1500, 2100, 1800, 2400],
+                    borderColor: '#875A7B',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Vehicle Distribution Chart
+        const vehicleCtx = document.getElementById('vehicleChart').getContext('2d');
+        new Chart(vehicleCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Trucks', 'Vans', 'Cars'],
+                datasets: [{
+                    data: [45, 35, 20],
+                    backgroundColor: ['#875A7B', '#6B4423', '#A8D1FF']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Maintenance Cost Chart
+        const maintenanceCtx = document.getElementById('maintenanceChart').getContext('2d');
+        new Chart(maintenanceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['TRK-001', 'TRK-002', 'VAN-001', 'VAN-002', 'CAR-001'],
+                datasets: [{
+                    label: 'Maintenance Cost ($)',
+                    data: [1200, 800, 600, 400, 300],
+                    backgroundColor: '#875A7B'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Driver Performance Chart
+        const driverCtx = document.getElementById('driverChart').getContext('2d');
+        new Chart(driverCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Safety', 'Efficiency', 'Timeliness', 'Communication', 'Vehicle Care'],
+                datasets: [{
+                    label: 'John Doe',
+                    data: [90, 85, 88, 92, 87],
+                    backgroundColor: 'rgba(135, 90, 123, 0.2)',
+                    borderColor: '#875A7B',
+                    pointBackgroundColor: '#875A7B'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
