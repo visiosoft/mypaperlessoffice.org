@@ -22,30 +22,90 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="logo.png" width="100%" alt="MyPalessOffice" >
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="MyPalessOffice">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Products
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="products/pos.html"><i class="fas fa-cash-register me-2"></i>POS System</a></li>
-                            <li><a class="dropdown-item" href="products/fleet.html"><i class="fas fa-truck me-2"></i>Fleet Management</a></li>
-                            <li><a class="dropdown-item" href="products/crm.html"><i class="fas fa-users me-2"></i>Site Core CRM</a></li>
-                            <li><a class="dropdown-item" href="products/towing.html"><i class="fas fa-car-crash me-2"></i>Car Towing</a></li>
-                            <li><a class="dropdown-item" href="products/gps.html"><i class="fas fa-satellite me-2"></i>GPRS System</a></li>
-                            <li><a class="dropdown-item" href="products/recommendation.html"><i class="fas fa-robot me-2"></i>Recommendation Engine</a></li>
+                            <li>
+                                <a class="dropdown-item" href="products/pos.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-cash-register"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>POS System</h6>
+                                        <p>Point of Sale Solution</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/fleet.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Fleet Management</h6>
+                                        <p>Vehicle Tracking System</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/crm.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Site Core CRM</h6>
+                                        <p>Customer Management</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/towing.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-car-crash"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Car Towing</h6>
+                                        <p>Towing Management System</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/gps.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-satellite"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>GPRS System</h6>
+                                        <p>GPS Tracking Solution</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/recommendation.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Recommendation Engine</h6>
+                                        <p>AI-Powered Suggestions</p>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -53,17 +113,57 @@
                             Services
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services/ai-solutions.html"><i class="fas fa-robot me-2"></i>AI Solutions</a></li>
-                            <li><a class="dropdown-item" href="services/data-analytics.html"><i class="fas fa-chart-line me-2"></i>Data Analytics</a></li>
-                            <li><a class="dropdown-item" href="services/cloud-services.html"><i class="fas fa-cloud me-2"></i>Cloud Services</a></li>
-                            <li><a class="dropdown-item" href="services/digital-transformation.html"><i class="fas fa-digital-tachograph me-2"></i>Digital Transformation</a></li>
+                            <li>
+                                <a class="dropdown-item" href="services/ai-solutions.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>AI Solutions</h6>
+                                        <p>Artificial Intelligence Services</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="services/data-analytics.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Data Analytics</h6>
+                                        <p>Business Intelligence</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="services/cloud-services.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Cloud Services</h6>
+                                        <p>Cloud Solutions</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="services/digital-transformation.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-digital-tachograph"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Digital Transformation</h6>
+                                        <p>Business Modernization</p>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link contact-btn" href="#contact">Contact</a>
+                        <a class="nav-link contact-btn" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
