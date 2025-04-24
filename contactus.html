@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MyPaperlessOffice</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://mypaperlessoffice.com/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="MyPaperlessOffice">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="products/pos.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-cash-register"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>POS System</h6>
+                                        <p>Point of Sale Solution</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/fleet.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Fleet Management</h6>
+                                        <p>Vehicle Tracking System</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/crm.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Site Core CRM</h6>
+                                        <p>Customer Management</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/towing.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-car-crash"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Car Towing</h6>
+                                        <p>Towing Management System</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/gps.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-satellite"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>GPRS System</h6>
+                                        <p>GPS Tracking Solution</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="products/recommendation.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Recommendation Engine</h6>
+                                        <p>AI-Powered Suggestions</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="services/ai-solutions.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>AI Solutions</h6>
+                                        <p>Artificial Intelligence Services</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="services/data-analytics.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Data Analytics</h6>
+                                        <p>Business Intelligence</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="services/cloud-services.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Cloud Services</h6>
+                                        <p>Cloud Solutions</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="services/digital-transformation.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-digital-tachograph"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Digital Transformation</h6>
+                                        <p>Business Modernization</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn active" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <span class="hero-badge">Get in Touch</span>
+                        <h1 class="display-4 fw-bold">Contact Us</h1>
+                        <p class="lead">Have questions? We're here to help you transform your business with our digital solutions.</p>
+                        <div class="contact-info mt-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Call Us</h5>
+                                    <p class="mb-0">+1 (568) 899-7890</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Email Us</h5>
+                                    <p class="mb-0">info@mypaperlessoffice.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Visit Us</h5>
+                                    <p class="mb-0">1115 South Bay Dr NW, STE 105
+                                        Olympia, WA 98502</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-form-wrapper bg-white p-4 rounded shadow">
+                        <h3 class="mb-4">Send us a message</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Last Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select" required>
+                                        <option value="">Select Service</option>
+                                        <option value="pos">POS System</option>
+                                        <option value="fleet">Fleet Management</option>
+                                        <option value="crm">Site Core CRM</option>
+                                        <option value="towing">Car Towing</option>
+                                        <option value="gps">GPRS System</option>
+                                        <option value="ai">AI Solutions</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Our Global Offices</h2>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="office-card text-center p-4 rounded shadow-sm">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h4>New York</h4>
+                        <p>123 Business Street<br>New York, NY 10001<br>United States</p>
+                        <p class="mb-0"><strong>Phone:</strong> +1 (123) 456-7890</p>
+                        <p><strong>Email:</strong> ny@mypaperlessoffice.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="office-card text-center p-4 rounded shadow-sm">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h4>London</h4>
+                        <p>456 Tech Avenue<br>London, EC1A 1BB<br>United Kingdom</p>
+                        <p class="mb-0"><strong>Phone:</strong> +44 20 7123 4567</p>
+                        <p><strong>Email:</strong> uk@mypaperlessoffice.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="office-card text-center p-4 rounded shadow-sm">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h4>Singapore</h4>
+                        <p>789 Digital Road<br>Singapore, 238801<br>Singapore</p>
+                        <p class="mb-0"><strong>Phone:</strong> +65 6789 0123</p>
+                        <p><strong>Email:</strong> sg@mypaperlessoffice.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Find Us</h2>
+            <div class="map-wrapper rounded shadow" data-aos="fade-up">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596698663!2d-74.25986548727506!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1645564756216!5m2!1sen!2sus"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>About MyPaperlessOffice</h5>
+                    <p>Leading provider of digital transformation solutions, helping businesses go paperless and improve efficiency.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products/pos.html">Products</a></li>
+                        <li><a href="services/ai-solutions.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Business Street, City, Country</li>
+                        <li><i class="fas fa-phone me-2"></i>+1 (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@mypaperlessoffice.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 MyPaperlessOffice. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.display = 'none';
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 
