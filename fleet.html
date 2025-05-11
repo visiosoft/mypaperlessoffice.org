@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management - MyPalessOffice</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../logo.png" alt="MyPalessOffice">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active d-flex justify-content-between align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span>Products</span>
+                            <i class="fas fa-chevron-down ms-2"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="pos.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-cash-register"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>POS System</h6>
+                                        <p>Point of Sale Solution</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item active" href="fleet.html">
+                                    <div class="dropdown-icon">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <h6>Fleet Management</h6>
+                                        <p>Vehicle Tracking System</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Other product menu items would go here -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="../contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section hero-fleet">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="hero-badge">Fleet Management System</div>
+                        <h1>Optimize Your Fleet Operations</h1>
+                        <p class="lead">Track, manage, and maintain your vehicle fleet with our comprehensive management solution.</p>
+                        <div class="hero-buttons">
+                            <a href="#features" class="btn btn-primary">Explore Features</a>
+                            <a href="../contactus.html" class="btn btn-outline-light">Request Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Key Features</h2>
+                <p class="lead">Comprehensive tools for efficient fleet management</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor your fleet in real-time with accurate GPS tracking and route history.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Maintenance Management</h3>
+                        <p>Schedule and track vehicle maintenance to prevent breakdowns and extend vehicle life.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-gas-pump"></i>
+                        <h3>Fuel Monitoring</h3>
+                        <p>Track fuel consumption and identify opportunities for cost savings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About MyPalessOffice</h4>
+                    <p>Delivering digital transformation across diverse industries with innovative solutions in AI, data analytics, and cloud services.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="pos.html"><i class="fas fa-chevron-right me-2"></i>POS System</a></li>
+                        <li><a href="fleet.html"><i class="fas fa-chevron-right me-2"></i>Fleet Management</a></li>
+                        <li><a href="../contactus.html"><i class="fas fa-chevron-right me-2"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Have questions about our Fleet Management System?</p>
+                    <a href="../contactus.html" class="btn btn-primary mt-2">Get in Touch</a>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center">
+                <p>&copy; 2025 MyPalessOffice, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html> 
